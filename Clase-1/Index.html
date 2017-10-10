@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Controller/app.js"></script>
+    <script src="Controller/Clase1Controller.js"></script>
+    <title></title>
+</head>
+<body ng-app="clase1App">
+    <div ng-controller="Clase1Controller">
+        <div class="row">
+          
+            <div class="col-sm-4">
+                <label> One Way(ng-bind o <span ng-non-bindable>{{}}</span>)</label>
+                <input type="text" value="{{Name}}" />
+            </div>
+            <div class="col-sm-4">
+                <label> two Way</label>
+                <input type="text" ng-model="Name" />
+            </div>
+            <div class="col-sm-4">
+                {{Name}}
+            </div>
+        </div>
+   
+    </div>
+</body>
+</html>
