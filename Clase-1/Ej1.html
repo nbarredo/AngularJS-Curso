@@ -13,22 +13,19 @@
 <body ng-app="clase1App">
     <div ng-controller="Clase1Controller">
         <div class="row">
-          
-            <div class="col-sm-4">
-                <label> One Way(ng-bind o <span ng-non-bindable>{{}}</span>)</label>
-                <input type="text" value="{{Name}}" />
-            </div>
-            <div class="col-sm-4">
-                <label> two Way</label>
-                <input type="text" ng-model="Name" />
-            </div>
-            <div class="col-sm-4">
-                {{Name}}   
 
-                <a href="Ej1.html">Ej1.html</a>
+            <div class="col-sm-6">
+                <div> Id:{{person.id}} IP:{{person.ip}}</div>
+                <div> Sexo:{{person.gender}}</div>
+                <div> Nombre:{{person.firstName}} {{person.lastName}}</div>
+            </div>
+            <div class="col-sm-6">
+                Nombre:<input type="text" ng-model="person.firstName" />
+                Apellido:<input type="text" ng-model="person.lastName" />
+              
             </div>
         </div>
-   
+
     </div>
 </body>
 </html>
