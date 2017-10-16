@@ -6,27 +6,54 @@
     <link href="Content/bootstrap-theme.css" rel="stylesheet" />
     <script src="Scripts/jquery-1.9.1.min.js"></script>
     <script src="Scripts/angular.min.js"></script>
-    <script src="Controller/app.js"></script>
-    <script src="Controller/Clase1Controller.js"></script>
+    <script src="Controller/app.js"></script> 
+    <script src="Controller/services.js"></script>
+    <script src="Controller/directivesController.js"></script>
     <title></title>
 </head>
-<body ng-app="clase1App">
-    <div ng-controller="Clase1Controller">
+<body ng-app="app">
+    <div class="container" ng-controller="DirectivesController">
+        <h1>Directives</h1>
         <div class="row">
-          
-            <div class="col-sm-4">
-                <label> One Way(ng-bind o <span ng-non-bindable>{{}}</span>)</label>
-                <input type="text" value="{{Name}}" />
-            </div>
-            <div class="col-sm-4">
-                <label> two Way</label>
-                <input type="text" ng-model="Name" />
-            </div>
-            <div class="col-sm-4">
-                {{Name}}
-            </div>
+            <table class="table table-bordered">
+                <colgroup span="7"></colgroup>
+
+                <tbody>
+                    <tr>
+                        <th scope="col" title="Id">Id</th>
+                        <th scope="col" title="FirstName">First Name</th>
+                        <th scope="col" title="LastName">LastName</th>
+                        <th scope="col" title="Email">Email</th>
+                        <th scope="col" title="Gender">Gender</th>
+                        <th scope="col" title="Ip">Ip</th>
+                        <th scope="col" title="Picture">Picture</th>
+                    </tr>
+                    <tr ng-repeat="person in persons">
+                        <td>
+                            {{person.Id}}
+                        </td>
+                        <td>
+                            {{person.FirstName}}
+                        </td>
+                        <td>
+                            {{person.LastName}}
+                        </td>
+                        <td>
+                            {{person.Email}}
+                        </td>
+                        <td>
+                            {{person.Gender}}
+                        </td>
+                        <td>
+                            {{person.Ip}}
+                        </td>
+                        <td>
+                            {{person.Picture}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-   
     </div>
 </body>
 </html>

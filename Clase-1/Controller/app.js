@@ -1,1 +1,1 @@
-﻿var app = angular.module('clase1App', []);
+﻿var app = angular.module('app', []);
