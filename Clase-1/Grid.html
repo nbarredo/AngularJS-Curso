@@ -1,0 +1,47 @@
+﻿ <div>
+     <table class="table table-bordered">
+         <colgroup span="7"></colgroup>
+
+         <tbody>
+             <tr>
+                 <th scope="col" title="Id">Id</th>
+                 <th scope="col" title="FirstName">First Name</th>
+                 <th scope="col" title="LastName">LastName</th>
+                 <th scope="col" title="Email">Email</th>
+                 <th scope="col" title="Gender">Gender</th>
+                 <th scope="col" title="Ip">Ip</th>
+                 <th scope="col" title="Picture">Picture</th>
+             </tr>
+             <tr ng-repeat="person in persons" ng-class="{'red-bg': isFemale(person)}">
+
+                 <td>
+                     {{person.Id}}
+                 </td>
+                 <td>
+                     {{person.FirstName}}
+                 </td>
+                 <td>
+                     {{person.LastName}}
+                 </td>
+                 <td>
+                     {{person.Email}}
+                 </td>
+                 <td>
+                     {{person.Gender}}
+                 </td>
+                 <td>
+                     {{person.Ip}}
+                 </td>
+                 <td>
+                     <div ng-switch="person.FirstName">
+                         <img ng-switch-when="Lalo" ng-src="{{person.Picture}}" />
+                         <div ng-switch-default>{{person.Picture}}</div>
+                     </div>
+                 </td>
+                 <td ng-click="remove($index)">
+                     <div style="cursor:pointer"> x</div>
+                 </td>
+             </tr>
+         </tbody>
+     </table>
+ </div>
