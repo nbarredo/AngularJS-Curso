@@ -50,8 +50,14 @@
                                 {{person.Ip}}
                             </td>
                             <td>
-                                {{person.Picture}}
+                                <div ng-switch="person.FirstName"> 
+                                    <img ng-switch-when="Lalo" ng-src="{{person.Picture}}"  />
+                                    <div ng-switch-default>{{person.Picture}}</div>
+                                </div>
                             </td> 
+                        <td ng-click="remove($index)">
+                            <div style="cursor:pointer"> x</div>
+                        </td> 
                     </tr>
                 </tbody>
             </table>

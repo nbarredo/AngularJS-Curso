@@ -10,4 +10,7 @@
     $scope.isFemale = function (person) {
         return person.Gender == 'Female';
     }
+    $scope.remove = function (index) { 
+        $scope.persons.splice(index, 1);
+    }
 }]);
