@@ -65,6 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\site.css" />
     <Content Include="Controller\directivesController.js" />
     <Content Include="Controller\services.js" />
     <Content Include="packages.config" />

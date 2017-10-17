@@ -6,5 +6,8 @@
 
     }, function(error) {
 
-    });
+        });
+    $scope.isFemale = function (person) {
+        return person.Gender == 'Female';
+    }
 }]);

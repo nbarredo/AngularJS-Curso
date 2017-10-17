@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
     <script src="Scripts/jquery-1.9.1.min.js"></script>
     <script src="Scripts/angular.min.js"></script>
     <script src="Controller/app.js"></script> 
@@ -28,28 +29,29 @@
                         <th scope="col" title="Ip">Ip</th>
                         <th scope="col" title="Picture">Picture</th>
                     </tr>
-                    <tr ng-repeat="person in persons">
-                        <td>
-                            {{person.Id}}
-                        </td>
-                        <td>
-                            {{person.FirstName}}
-                        </td>
-                        <td>
-                            {{person.LastName}}
-                        </td>
-                        <td>
-                            {{person.Email}}
-                        </td>
-                        <td>
-                            {{person.Gender}}
-                        </td>
-                        <td>
-                            {{person.Ip}}
-                        </td>
-                        <td>
-                            {{person.Picture}}
-                        </td>
+                    <tr ng-repeat="person in persons" ng-class="{'red-bg': isFemale(person)}">
+                       
+                            <td>
+                                {{person.Id}}
+                            </td>
+                            <td>
+                                {{person.FirstName}}
+                            </td>
+                            <td>
+                                {{person.LastName}}
+                            </td>
+                            <td>
+                                {{person.Email}}
+                            </td>
+                            <td>
+                                {{person.Gender}}
+                            </td>
+                            <td>
+                                {{person.Ip}}
+                            </td>
+                            <td>
+                                {{person.Picture}}
+                            </td> 
                     </tr>
                 </tbody>
             </table>
