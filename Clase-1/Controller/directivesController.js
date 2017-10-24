@@ -13,4 +13,20 @@
     $scope.remove = function (index) { 
         $scope.persons.splice(index, 1);
     }
+
+    var _newObj = {};
+
+    $scope.newObj = _newObj;
+
+    $scope.add = function(){
+        personService.post($scope.newObj).then(function(data){
+            alert('Element has been added');
+            personService.getAll().then(function(persons){
+                $scope.persons = persons;
+            });
+        }, function(error) {
+            alert('Error')
+        });
+    }
+
 }]);

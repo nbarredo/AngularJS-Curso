@@ -12,4 +12,17 @@ app.service('personService', function ($http, $q) {
         });
         return promise;
     }
+
+    this.post = function(data){
+        var deferred = $q.defer();
+        var promise = deferred.promise;
+
+        $http.post("http://curso-api.azurewebsites.net/api/Persons", data).then(function (response) {
+            deferred.resolve(true);
+        }, function (Error) {
+            console.log(Error);
+            deferred.reject(false);
+        });
+        return promise;
+    }
 });
