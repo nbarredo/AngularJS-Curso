@@ -7,16 +7,19 @@
     <link href="Content/site.css" rel="stylesheet" />
     <script src="Scripts/jquery-1.9.1.min.js"></script>
     <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.js"></script>
     <script src="Controller/app.js"></script> 
     <script src="Controller/services.js"></script>
     <script src="Controller/directivesController.js"></script>
+    <script src="Controller/detailsController.js"></script>
     <title></title>
 </head>
 <body ng-app="app">
     <div class="container" ng-controller="DirectivesController">
         <h1>Directives</h1>
+        <a href="/#!/grid"> Grid</a>
         <div class="row">
-        <div ng-include="'grid.html'"></div>
+        <div ng-view></div>
         </div>
     </div>
 </body>

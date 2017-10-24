@@ -66,12 +66,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\site.css" />
+    <Content Include="Controller\detailsController.js" />
     <Content Include="Controller\directivesController.js" />
     <Content Include="Controller\services.js" />
+    <Content Include="Details.html" />
     <Content Include="grid.html" />
     <Content Include="packages.config" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Scripts\angular-route.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

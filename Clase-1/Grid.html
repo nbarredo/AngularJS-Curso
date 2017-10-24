@@ -11,6 +11,8 @@
                  <th scope="col" title="Gender">Gender</th>
                  <th scope="col" title="Ip">Ip</th>
                  <th scope="col" title="Picture">Picture</th>
+                 <th scope="col" title="Remove">Remove</th>
+                 <th scope="col" title="Edit">Edit</th>
              </tr>
              <tr ng-repeat="person in persons" ng-class="{'red-bg': isFemale(person)}">
 
@@ -40,6 +42,9 @@
                  </td>
                  <td ng-click="remove($index)">
                      <div style="cursor:pointer"> x</div>
+                 </td>
+                 <td>
+                     <a ng-href="#!/details/{{person.Id}}" class="glyphicon glyphicon-edit"></a>
                  </td>
              </tr>
          </tbody>
