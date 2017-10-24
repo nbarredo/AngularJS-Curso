@@ -1,4 +1,7 @@
 ﻿ <div>
+     <div class="row">
+         <input type="text" ng-model="search" />
+     </div>
      <table class="table table-bordered">
          <colgroup span="7"></colgroup>
 
@@ -8,13 +11,13 @@
                  <th scope="col" title="FirstName">First Name</th>
                  <th scope="col" title="LastName">LastName</th>
                  <th scope="col" title="Email">Email</th>
-                 <th scope="col" title="Gender">Gender</th>
+                 <th scope="col" title="Gender">Gender</th>  
                  <th scope="col" title="Ip">Ip</th>
                  <th scope="col" title="Picture">Picture</th>
                  <th scope="col" title="Remove">Remove</th>
                  <th scope="col" title="Edit">Edit</th>
              </tr>
-             <tr ng-repeat="person in persons" ng-class="{'red-bg': isFemale(person)}">
+             <tr ng-repeat="person in persons | filter:search" ng-class="{'red-bg': isFemale(person)}">
 
                  <td>
                      {{person.Id}}
@@ -41,7 +44,7 @@
                      </div>
                  </td>
                  <td ng-click="remove($index)">
-                     <div style="cursor:pointer"> x</div>
+                     <div style="cursor:pointer"> x</div>  
                  </td>
                  <td>
                      <a ng-href="#!/details/{{person.Id}}" class="glyphicon glyphicon-edit"></a>
