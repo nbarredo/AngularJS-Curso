@@ -1,5 +1,4 @@
-﻿//ng-class ejemplo
-app.service('personService', function ($http, $q) {
+﻿angular.module('services', []).service('personService', function ($http, $q) {
     this.getAll = function () {
         var deferred = $q.defer();
         var promise = deferred.promise;
@@ -26,3 +25,5 @@ app.service('personService', function ($http, $q) {
         return promise;
     }
 });
+
+

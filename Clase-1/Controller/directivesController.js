@@ -11,6 +11,8 @@
         return person.Gender == 'Female';
     }
     $scope.remove = function (index) { 
+        var id = $scope.persons[index].Id;
         $scope.persons.splice(index, 1);
+        personService.delete(id);
     }
 }]);
