@@ -3,9 +3,20 @@
 <div ng-controller="DetailsController">
 
 
-    <div class="row">
-        <div class="col-lg-2">   Id: {{person.Id}} </div><div class="col-lg-2">   Name: {{person.FirstName}} {{person.LastName}}</div>  
+    <form class="row" name="personForm">
+        <div class="col-lg-2">   Id: {{person.Id}} </div>
+        <div class="row">
+            <input type="text" ng-model="person.FirstName" name="FirstName" ng-minlength="3" ng-maxlength="20" required />
+            <pre>personForm.FirstName.$error = {{ personForm.FirstName.$error | json }}</pre>
+
+            <div ng-messages="personForm.FirstName.$error" style="color:maroon" role="alert">
+                <div ng-message="required">You did not enter a field</div>
+                <div ng-message="minlength">Your field is too short</div>
+                <div ng-message="maxlength">Your field is too long</div>
+            </div>
+        </div>
+        <div class="col-lg-2">   Name: {{person.FirstName}} {{person.LastName}}</div>  
         <div class="col-lg-2">   Email: {{person.Email}} </div><div class="col-lg-2">   Gender: {{person.Gender}}  </div>
         <div class="col-lg-2">   Ip: {{person.Ip}} </div><img class="col-lg-2" ng-src="{{person.Picture}}" />
-    </div>
+    </form>
 </div>

@@ -1,4 +1,4 @@
-﻿var app = angular.module('app', ['ngRoute', 'services']);
+﻿var app = angular.module('app', ['ngRoute', 'ngMessages', 'services']);
 
 app.config(function ($routeProvider) {
     $routeProvider
